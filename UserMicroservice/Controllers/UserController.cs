@@ -5,6 +5,7 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using UserMicroservice.Consts;
 using UserMicroservice.DTO.User;
 using UserMicroservice.Localization;
 using UserMicroservice.Services;
@@ -23,12 +24,13 @@ namespace UserMicroservice.Controllers
             _userService = userService;
         }
 
-        [Authorize(Roles = "User")]
+        [Authorize(Roles = RoleConsts.ROLE_USER)]
         [HttpGet]
         public ActionResult<List<UserResponseDTO>> HandleGetAllUsers() {
             return Ok(this._userService.GetAll());
         }
 
+        [AllowAnonymous]
         [HttpGet(RouteConsts.ROUTE_USER_GET_ONE_BY_UUID)]
         public ActionResult<UserResponseDTO> HandleGetOneUserByUuid(string uuid) {
             return Ok(this._userService.GetOneByUuid(uuid));
