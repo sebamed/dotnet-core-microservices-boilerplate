@@ -46,6 +46,9 @@ Communication between microservices can be both async and sync. Synchronous (*RE
 The next step would be to see this boilerplate in action, gather experiences and modify the project.
 
 ## Todo
+- [ ] Add JWT validation on every request that comes to API Gateway
+- [ ] Separate repetitive code into *Commons* project or create Nuget package out of it
+
 - [ ] Implement Swagger in API Gateway layer - Ocelot Swagger
 - [ ] Implement synchronous communication between microservices
 - [ ] Add mailing service
