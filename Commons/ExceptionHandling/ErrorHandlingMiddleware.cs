@@ -25,6 +25,8 @@ namespace Commons.ExceptionHandling {
 
             if (ex is EntityNotFoundException) {
                 code = HttpStatusCode.NotFound;
+            } else if (ex is UnauthenticatedException) {
+                code = HttpStatusCode.Unauthorized;
             }
 
             // actual response
@@ -32,7 +34,6 @@ namespace Commons.ExceptionHandling {
                 messsage = ex.Message,
                 status = code,
                 requested_uri = context.Request.Path,
-                origin = "user microservice",
                 timestamp = DateTime.Now
             });
 
@@ -41,5 +42,6 @@ namespace Commons.ExceptionHandling {
 
             return context.Response.WriteAsync(result);
         }
+
     }
 }

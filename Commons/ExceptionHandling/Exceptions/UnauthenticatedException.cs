@@ -1,7 +1,7 @@
 ﻿using System;
 
 namespace Commons.ExceptionHandling.Exceptions {
-    public class EntityNotFoundException : Exception {
+    public class UnauthenticatedException : Exception {
 
         public string message { get; set; }
 
@@ -9,8 +9,11 @@ namespace Commons.ExceptionHandling.Exceptions {
             get { return this.message; }
         }
 
-        public EntityNotFoundException(string message) {
+        public UnauthenticatedException(string message) {
             this.message = message;
         }
+
+        
+
     }
 }
