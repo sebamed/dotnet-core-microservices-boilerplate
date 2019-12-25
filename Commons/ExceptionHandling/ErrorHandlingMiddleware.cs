@@ -1,13 +1,11 @@
-﻿using Microsoft.AspNetCore.Http;
+﻿using Commons.ExceptionHandling.Exceptions;
+using Microsoft.AspNetCore.Http;
 using Newtonsoft.Json;
 using System;
-using System.Collections.Generic;
-using System.Linq;
 using System.Net;
 using System.Threading.Tasks;
-using UserMicroservice.ExceptionHandling.Exceptions;
 
-namespace UserMicroservice.ExceptionHandling {
+namespace Commons.ExceptionHandling {
     public class ErrorHandlingMiddleware {
         private readonly RequestDelegate next;
         public ErrorHandlingMiddleware(RequestDelegate next) {

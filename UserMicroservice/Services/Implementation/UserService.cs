@@ -1,10 +1,7 @@
-﻿using System;
+﻿using Commons.ExceptionHandling.Exceptions;
 using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
 using UserMicroservice.DTO.User;
 using UserMicroservice.DTO.User.Request;
-using UserMicroservice.ExceptionHandling.Exceptions;
 
 namespace UserMicroservice.Services.Implementation {
     public class UserService : IUserService {

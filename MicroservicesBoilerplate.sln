@@ -9,6 +9,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "UserMicroservice", "UserMic
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AuthResource", "AuthResource\AuthResource.csproj", "{2D184FAB-244A-498E-BDF2-B18AE5E4D17E}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Commons", "Commons\Commons.csproj", "{89ECCE68-5EE6-4788-BB33-19A10A1D86B3}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,6 +29,10 @@ Global
 		{2D184FAB-244A-498E-BDF2-B18AE5E4D17E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{2D184FAB-244A-498E-BDF2-B18AE5E4D17E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{2D184FAB-244A-498E-BDF2-B18AE5E4D17E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{89ECCE68-5EE6-4788-BB33-19A10A1D86B3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{89ECCE68-5EE6-4788-BB33-19A10A1D86B3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{89ECCE68-5EE6-4788-BB33-19A10A1D86B3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{89ECCE68-5EE6-4788-BB33-19A10A1D86B3}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
