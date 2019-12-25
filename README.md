@@ -47,7 +47,7 @@ The next step would be to see this boilerplate in action, gather experiences and
 
 ## Todo
 - [ ] Add JWT validation on every request that comes to API Gateway
-- [ ] Separate repetitive code into *Commons* project or create Nuget package out of it
+- [x] Separate repetitive code into *Commons* project or create Nuget package out of it - **Created Commons project**
 
 - [ ] Implement Swagger in API Gateway layer - Ocelot Swagger
 - [ ] Implement synchronous communication between microservices
