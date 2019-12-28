@@ -44,7 +44,7 @@ namespace APIGateway {
 
                            try {
                                await next.Invoke();
-                           } catch (Exception ex) {
+                           } catch (BaseException ex) {
                                await CustomOcelotExceptionHandling.HandleExceptionAsync(context, ex);
                            }
 

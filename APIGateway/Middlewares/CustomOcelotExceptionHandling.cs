@@ -11,7 +11,7 @@ using System.Threading.Tasks;
 namespace APIGateway.ExceptionHandling {
     public class CustomOcelotExceptionHandling {
 
-        public static Task HandleExceptionAsync(DownstreamContext context, Exception ex) {
+        public static Task HandleExceptionAsync(DownstreamContext context, BaseException ex) {
             var code = HttpStatusCode.InternalServerError; // 500 if unexpected
 
             if (ex is EntityNotFoundException) {
@@ -25,7 +25,7 @@ namespace APIGateway.ExceptionHandling {
                 messsage = ex.Message,
                 status = code,
                 requested_uri = context.HttpContext.Request.Path,
-                origin = "API Gateway",
+                origin = ex.origin,
                 timestamp = DateTime.Now
             });
 

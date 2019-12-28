@@ -1,16 +1,12 @@
 ﻿using System;
 
 namespace Commons.ExceptionHandling.Exceptions {
-    public class EntityNotFoundException : Exception {
+    public class EntityNotFoundException : BaseException {
 
-        public string message { get; set; }
-
-        public override string Message {
-            get { return this.message; }
-        }
-
-        public EntityNotFoundException(string message) {
+        public EntityNotFoundException(string message, string origin) : base(message, origin) {
             this.message = message;
+            this.origin = origin;
         }
+
     }
 }

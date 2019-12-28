@@ -1,19 +1,12 @@
 ﻿using System;
 
 namespace Commons.ExceptionHandling.Exceptions {
-    public class UnauthenticatedException : Exception {
+    public class UnauthenticatedException : BaseException {
 
-        public string message { get; set; }
-
-        public override string Message {
-            get { return this.message; }
-        }
-
-        public UnauthenticatedException(string message) {
+        public UnauthenticatedException(string message, string origin) : base(message, origin) {
             this.message = message;
+            this.origin = origin;
         }
-
-        
 
     }
 }

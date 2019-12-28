@@ -15,12 +15,12 @@ namespace Commons.ExceptionHandling {
         public async Task Invoke(HttpContext context /* other dependencies */) {
             try {
                 await next(context);
-            } catch (Exception ex) {
+            } catch (BaseException ex) {
                 await HandleExceptionAsync(context, ex);
             }
         }
 
-        private static Task HandleExceptionAsync(HttpContext context, Exception ex) {
+        private static Task HandleExceptionAsync(HttpContext context, BaseException ex) {
             var code = HttpStatusCode.InternalServerError; // 500 if unexpected
 
             if (ex is EntityNotFoundException) {
@@ -34,7 +34,8 @@ namespace Commons.ExceptionHandling {
                 messsage = ex.Message,
                 status = code,
                 requested_uri = context.Request.Path,
-                timestamp = DateTime.Now
+                timestamp = DateTime.Now,
+                origin = ex.origin
             });
 
             context.Response.ContentType = "application/json";

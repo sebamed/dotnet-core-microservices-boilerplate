@@ -1,4 +1,5 @@
-﻿using Commons.ExceptionHandling.Exceptions;
+﻿using APIGateway.Consts;
+using Commons.ExceptionHandling.Exceptions;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -17,7 +18,7 @@ namespace APIGateway.Middlewares {
             } else {
                 // token does not exist
 
-                throw new UnauthenticatedException("You must provide a token to access this route!");
+                throw new UnauthenticatedException("You must provide a token to access this route!", GeneralConsts.MICROSERVICE_NAME);
             }
         }
 
